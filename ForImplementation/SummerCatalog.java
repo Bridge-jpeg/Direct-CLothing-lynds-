@@ -13,7 +13,7 @@ public class SummerCatalog extends CatalogForImplementation {
         return false;
     }
 
-    public SummerCatalog(String itemName, double itemPrice, String itemDescription) {
+    public SummerCatalog(String itemName, double itemPrice, int itemStock, String itemDescription) {
         this.itemName = itemName;
         this.itemPrice = itemPrice;
         this.itemStock = itemStock;

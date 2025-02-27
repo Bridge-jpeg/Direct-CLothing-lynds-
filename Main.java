@@ -8,7 +8,7 @@ public class Main {
         Inventory inventory = new Inventory();
         Order order = new Order();
         Payment payment = new Payment();
-/*
+
         // To be implemented
         // Items for Spring catalog (Item name, Item price, Item stock, Item Description)
         SpringCatalog item1 = new SpringCatalog("1: Linen Button-Down Shirt", 2800 , 25, "Tailored for warmth and elegance");
@@ -35,7 +35,7 @@ public class Main {
         SummerCatalog [] items2 = {item4, item5, item6};
         AutumnCatalog [] items3 = {item7, item8, item9};
         WinterCatalog [] items4 = {item10, item11, item12};
-*/
+
 
 //       Test variables, to be transferred to other class
         int testChooseGender;
@@ -60,6 +60,9 @@ public class Main {
 
         if (testChooseGender == 1){
             System.out.println("\n1: Spring Catalog - Fresh and Casual \uD83C\uDF3F\uD83C\uDF1E");
+            System.out.println("\n2: Winter Catalog - Warm Clothes");
+            System.out.println("\n3: Summer Catalog - Hot Clothes ");
+            System.out.println("\n4: Autumn Catalog - Chilly Clothes ");
             System.out.print("Pick a catalog: ❄ \uFE0F\uD83E\uDDE5");
             chooseACatalog = input.nextInt();
 
@@ -80,10 +83,15 @@ public class Main {
                         break;
                 }
                 case 2:
-                System.out.println(" ");
+                    System.out.println(" ");
 
-                    System.out.println("This item is out of stock, do you want to pre order?");
                     
+                case 3:
+
+
+                case 4:
+                    System.out.println("This item is out of stock, do you want to pre order?");
+
 
             }
         }

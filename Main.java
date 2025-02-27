@@ -8,7 +8,7 @@ public class Main {
         Inventory inventory = new Inventory();
         Order order = new Order();
         Payment payment = new Payment();
-
+/* 
         // To be implemented
         // Items for Spring catalog (Item name, Item price, Item stock, Item Description)
         SpringCatalog item1 = new SpringCatalog("1: Linen Button-Down Shirt", 2800 , 25, "Tailored for warmth and elegance");
@@ -35,7 +35,7 @@ public class Main {
         SummerCatalog [] items2 = {item4, item5, item6};
         AutumnCatalog [] items3 = {item7, item8, item9};
         WinterCatalog [] items4 = {item10, item11, item12};
-
+*/
 
 //       Test variables, to be transferred to other class
         int testChooseGender;
@@ -69,10 +69,15 @@ public class Main {
             switch (chooseACatalog){
                 case 1:
                     System.out.println(" ");
+                    // prints the lines 1. Linen Button-Down Shirt: PHP 1960
+                    // 2. Slim-Fit Chino Pants: PHP 2352
+                    // 3. Casual Loafers: PHP 3136
+                    // Choose an item: 1
                     inventory.displayCatalog(testCatalog.getSpringCatalogItem(), testCatalog.getSpringCatalogPrice(), springCatalog.isCurrent());
                     System.out.print("Choose an item: ");
                     inventory.chooseItem = input.nextInt();
                     System.out.println("\n"+inventory.showItemInfo(inventory.chooseItem, testCatalog.getSpringCatalogItem(), testCatalog.getSpringCatalogItemStock()));
+                    
                     order.itemName = inventory.showItemName(inventory.chooseItem, testCatalog.getSpringCatalogItem());
                     order.itemPrice = inventory.showItemPrice(inventory.chooseItem, testCatalog.getSpringCatalogPrice());
 

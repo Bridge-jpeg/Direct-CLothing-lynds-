@@ -1,19 +1,19 @@
 public class Inventory {
     public int chooseItem;
-    public void displayCatalog(String[] String, double [] doubles, boolean currentCatalog, String description){
-        for(int i = 0, itemNumber = 1; i<String.length; i++, itemNumber++){
+    public void displayCatalog(String String, double  doubles, boolean CatalogForImplementation, String description){
+        for(int i = 0, itemNumber = 1; i<String.length(); i++, itemNumber++){
             if (CatalogForImplementation){
-                System.out.println(itemNumber + ". " + String[i] + ": PHP " + Math.round(doubles[i]*.7) + description);
+                System.out.println(itemNumber + ". " + String + ": PHP " + Math.round(doubles*.7) + description);
             }
             else {
-                System.out.println(itemNumber + ". " + String[i] + ": PHP " + doubles[i] + description );
+                System.out.println(itemNumber + ". " + String + ": PHP " + doubles + description );
             }
         }
     }
-    public boolean ifInStock(int chooseItem, int [] ints){
+    public boolean ifInStock(int chooseItem, int ints){
         int showOrder = chooseItem - 1;
         boolean inStock;
-        inStock = ints[showOrder] != 0;
+        inStock = showOrder != 0;
         return inStock;
     }
 

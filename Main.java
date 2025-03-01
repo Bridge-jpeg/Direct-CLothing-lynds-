@@ -30,12 +30,12 @@ public class Main {
         WinterCatalog item11 = new WinterCatalog("11: Thermal Knit Sweater", 3920, 20,"Soft, insulating sweater for cold weather.");
         WinterCatalog item12 = new WinterCatalog("12: Leather Lace-Up Boots", 6720, 15,"Rugged, insulated boots for winter durability.");
 
-
-        SpringCatalog [] items = {item1, item2, item3};
-        SummerCatalog [] items2 = {item4, item5, item6};
-        AutumnCatalog [] items3 = {item7, item8, item9};
-        WinterCatalog [] items4 = {item10, item11, item12};
 */
+        SpringCatalog [] items = {item1, item2, item3};
+        // SummerCatalog [] items2 = {item4, item5, item6};
+        // AutumnCatalog [] items3 = {item7, item8, item9};
+        // WinterCatalog [] items4 = {item10, item11, item12};
+
 
 //       Test variables, to be transferred to other class
         int testChooseGender;
@@ -76,7 +76,7 @@ public class Main {
                     inventory.displayCatalog(springCatalog.getItemName(), springCatalog.getItemPrice(), springCatalog.isCurrent(), springCatalog.getItemDescription());
                     System.out.print("Choose an item: ");
                     inventory.chooseItem = input.nextInt();
-                    System.out.println("\n"+inventory.showItemInfo(inventory.chooseItem, SpringCatalog.getSpringCatalog(), testCatalog.getSpringCatalogItemStock()));
+                    System.out.println("\n"+inventory.showItemInfo(inventory.chooseItem, SpringCatalog.getSpringCatalog(), SpringCatalog.getSpringCatalogItemStock()));
                     
                     order.itemName = inventory.showItemName(inventory.chooseItem, testCatalog.getSpringCatalogItem());
                     order.itemPrice = inventory.showItemPrice(inventory.chooseItem, testCatalog.getSpringCatalogPrice());

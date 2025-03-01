@@ -1,5 +1,3 @@
-package ForImplementation;
-
 public abstract class CatalogForImplementation {
     public abstract boolean isCurrent();
     public abstract void itemInfo();

@@ -1,12 +1,12 @@
 public class Inventory {
     public int chooseItem;
-    public void displayCatalog(String[] String, double[] doubles, boolean currentCatalog){
+    public void displayCatalog(String[] String, double [] doubles, boolean currentCatalog, String description){
         for(int i = 0, itemNumber = 1; i<String.length; i++, itemNumber++){
-            if (currentCatalog) {
-                System.out.println(itemNumber + ". " + String[i] + ": PHP " + Math.round(doubles[i]*.7));
+            if (CatalogForImplementation.isCurrent()){
+                System.out.println(itemNumber + ". " + String[i] + ": PHP " + Math.round(doubles[i]*.7) + description);
             }
             else {
-                System.out.println(itemNumber + ". " + String[i] + ": PHP " + doubles[i]);
+                System.out.println(itemNumber + ". " + String[i] + ": PHP " + doubles[i] + description );
             }
         }
     }
@@ -29,4 +29,9 @@ public class Inventory {
         int showItemPrice = chooseItem - 1;
         return doubles[showItemPrice];
     }
+    public String showItemdescription (int chooseItem, String[] String) {
+        int showItemdescription = chooseItem - 1;
+        return String [showItemdescription];
+    }
+
 }

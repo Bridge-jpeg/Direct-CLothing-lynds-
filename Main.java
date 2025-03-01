@@ -4,17 +4,17 @@ public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         Customer customer = new Customer();
-        currentCatalog springCatalog = new testCatalog();
+        SpringCatalog springCatalog = new SpringCatalog();
         Inventory inventory = new Inventory();
         Order order = new Order();
         Payment payment = new Payment();
-/* 
+
         // To be implemented
         // Items for Spring catalog (Item name, Item price, Item stock, Item Description)
         SpringCatalog item1 = new SpringCatalog("1: Linen Button-Down Shirt", 2800 , 25, "Tailored for warmth and elegance");
         SpringCatalog item2 = new SpringCatalog("2: Slim-Fit Chino Pants", 3360, 30, "Versatile and stylish pants for any occasion.");
         SpringCatalog item3 = new SpringCatalog("3: Casual Loafers", 4480, 0,"Sleek slip-on shoes for casual and semi-formal looks.");
-
+/* 
 //      Items for Summer Catalog (Item name, Item price, Item stock, Item Description)
         SummerCatalog item4 = new SummerCatalog("4: Short-Sleeve Cuban Collar Shirt", 2240, 20,"Relaxed fit with bold prints for sunny days.");
 		SummerCatalog item5 = new SummerCatalog("5: Short-Tailored Shorts", 2800, 25, "Knee-length, breathable shorts for summer comfort.");
@@ -73,7 +73,7 @@ public class Main {
                     // 2. Slim-Fit Chino Pants: PHP 2352
                     // 3. Casual Loafers: PHP 3136
                     // Choose an item: 1
-                    inventory.displayCatalog(testCatalog.getSpringCatalogItem(), testCatalog.getSpringCatalogPrice(), springCatalog.isCurrent());
+                    inventory.displayCatalog(springCatalog.getItemName(), springCatalog.getItemPrice(), springCatalog.isCurrent(), springCatalog.getItemDescription());
                     System.out.print("Choose an item: ");
                     inventory.chooseItem = input.nextInt();
                     System.out.println("\n"+inventory.showItemInfo(inventory.chooseItem, testCatalog.getSpringCatalogItem(), testCatalog.getSpringCatalogItemStock()));

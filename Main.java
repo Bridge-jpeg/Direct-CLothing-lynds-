@@ -76,7 +76,7 @@ public class Main {
                     inventory.displayCatalog(springCatalog.getItemName(), springCatalog.getItemPrice(), springCatalog.isCurrent(), springCatalog.getItemDescription());
                     System.out.print("Choose an item: ");
                     inventory.chooseItem = input.nextInt();
-                    System.out.println("\n"+inventory.showItemInfo(inventory.chooseItem, testCatalog.getSpringCatalogItem(), testCatalog.getSpringCatalogItemStock()));
+                    System.out.println("\n"+inventory.showItemInfo(inventory.chooseItem, SpringCatalog.getSpringCatalog(), testCatalog.getSpringCatalogItemStock()));
                     
                     order.itemName = inventory.showItemName(inventory.chooseItem, testCatalog.getSpringCatalogItem());
                     order.itemPrice = inventory.showItemPrice(inventory.chooseItem, testCatalog.getSpringCatalogPrice());

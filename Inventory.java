@@ -2,7 +2,7 @@ public class Inventory {
     public int chooseItem;
     public void displayCatalog(String[] String, double [] doubles, boolean currentCatalog, String description){
         for(int i = 0, itemNumber = 1; i<String.length; i++, itemNumber++){
-            if (CatalogForImplementation.isCurrent()){
+            if (CatalogForImplementation){
                 System.out.println(itemNumber + ". " + String[i] + ": PHP " + Math.round(doubles[i]*.7) + description);
             }
             else {

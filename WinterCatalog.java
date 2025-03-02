@@ -1,4 +1,3 @@
-package ForImplementation;
 
 public class WinterCatalog extends CatalogForImplementation {
 
@@ -20,6 +19,7 @@ public class WinterCatalog extends CatalogForImplementation {
         this.itemDescription = itemDescription;
     }
 
+    
     @Override
     public void itemInfo() {
         System.out.println("Item: " + itemName);

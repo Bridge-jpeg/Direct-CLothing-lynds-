@@ -1,6 +1,6 @@
-package ForImplementation;
 
-public class AutumnCatalog extends CatalogForImplementation {
+
+public class SummerCatalog extends CatalogForImplementation {
 
     @Override
     public String getItemName() {return this.itemName;}
@@ -13,18 +13,19 @@ public class AutumnCatalog extends CatalogForImplementation {
         return false;
     }
 
-    public AutumnCatalog(String itemName, double itemPrice, int itemStock, String itemDescription) {
+    public SummerCatalog(String itemName, double itemPrice, int itemStock, String itemDescription) {
         this.itemName = itemName;
         this.itemPrice = itemPrice;
         this.itemStock = itemStock;
         this.itemDescription = itemDescription;
     }
 
+   
     @Override
     public void itemInfo() {
         System.out.println("Item: " + itemName);
         System.out.println("Price: " + currency + itemPrice);
-        System.out.println("InStock: " + itemStock);
+        System.out.println("InStock: " + itemStock + "\n");
         System.out.println("Item Desription: " + itemDescription + "\n");
     }
 }

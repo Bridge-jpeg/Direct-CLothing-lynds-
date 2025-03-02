@@ -1,37 +1,19 @@
+
 public class Inventory {
-    public int chooseItem;
-    public void displayCatalog(String String, double  doubles, boolean CatalogForImplementation, String description){
-        for(int i = 0, itemNumber = 1; i<String.length(); i++, itemNumber++){
-            if (CatalogForImplementation){
-                System.out.println(itemNumber + ". " + String + ": PHP " + Math.round(doubles*.7) + description);
-            }
-            else {
-                System.out.println(itemNumber + ". " + String + ": PHP " + doubles + description );
-            }
+    public void checkStock (Integer ints){
+        if (ints <= 0){
+            System.out.println("Out of stock, Pre order? ");
+            System.out.println("1: Yes\n2: No");
+            System.out.print("Enter your Choice: ");
+        }
+        else{
+            System.out.println("Proceed to payment");
         }
     }
-    public boolean ifInStock(int chooseItem, int ints){
-        int showOrder = chooseItem - 1;
-        boolean inStock;
-        inStock = showOrder != 0;
-        return inStock;
+    public void ifPreOrder(Byte bytes){
+        if (bytes == 2){
+            System.exit(0);
+        }
     }
-
-    public String showItemInfo(int chooseItem, String[] String , int []ints){
-        int showOrder = chooseItem - 1;
-        return String [showOrder] +"\nIn stock: "+ ints[showOrder];
-    }
-    public String showItemName(int chooseItem, String[] String){
-        int showOrder = chooseItem - 1;
-        return String [showOrder];
-    }
-    public double showItemPrice(int chooseItem, double[] doubles){
-        int showItemPrice = chooseItem - 1;
-        return doubles[showItemPrice];
-    }
-    public String showItemdescription (int chooseItem, String[] String) {
-        int showItemdescription = chooseItem - 1;
-        return String [showItemdescription];
-    }
-
 }
+ 

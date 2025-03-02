@@ -1,9 +1,9 @@
 public class Order {
     String itemName;
-    int itemQuantity;
+    Byte itemQuantity;
     double itemPrice;
 
-    void printReceipt(String userName, String userAddress, String userContactNumber, String itemName, double itemPrice, int itemQuantity, String paymentType, int paymentID){
+    void printReceipt(String userName, String userAddress, String userContactNumber, String itemName, double itemPrice, Byte itemQuantity, String paymentType, int paymentID){
         System.out.println(" ");
         System.out.println("===========Receipt===========");
         System.out.println("Name:"+ userName);

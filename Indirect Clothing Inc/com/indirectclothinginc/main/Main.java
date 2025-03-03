@@ -1,4 +1,4 @@
-package com.indirectclothinginc.main;
+package indirectclothinginc.main;
 
 import indirectclothinginc.catalog.AutumnCatalog;
 import indirectclothinginc.catalog.SpringCatalog;
@@ -6,6 +6,7 @@ import indirectclothinginc.catalog.SummerCatalog;
 import indirectclothinginc.catalog.WinterCatalog;
 import indirectclothinginc.customerside.Customer;
 import indirectclothinginc.customerside.Payment;
+import indirectclothinginc.inventoryside.Discount;
 import indirectclothinginc.inventoryside.Inventory;
 import indirectclothinginc.inventoryside.Order;
 
@@ -17,6 +18,7 @@ public class Main {
         Inventory inventory = new Inventory();
         Order order = new Order();
         Payment payment = new Payment();
+        Discount discount = new Discount();
 
         // To be implemented
         // Items for Spring catalog (Item name, Item price, Item stock, Item Description)
@@ -81,17 +83,22 @@ public class Main {
                 System.out.println("==============================================");
                 System.out.print("Choose Item: ");
                 chooseItem = input.nextByte();
+                boolean isCurrentDiscount = true;
 
                 switch (chooseItem) {
                     case 1:
                         inventory.setNameAndPrice(s1item1.getItemName(), s1item1.getItemStock());
                         order.itemName = s1item1.getItemName();
                         order.itemPrice = s1item1.getItemPrice();
+
+                        order.applyDiscount(isCurrentDiscount); // Apply the discount
                         break;
                     case 2:
                         inventory.setNameAndPrice(s1item2.getItemName(), s1item2.getItemStock());
                         order.itemName = s1item2.getItemName();
                         order.itemPrice = s1item2.getItemPrice();
+                        
+                        order.applyDiscount(isCurrentDiscount); // Apply the discount
                         break;
                     case 3:
                         inventory.setNameAndPrice(s1item3.getItemName(), s1item3.getItemStock());
@@ -187,6 +194,7 @@ public class Main {
         }
         System.out.print("Enter item quantity: ");
         order.itemQuantity = input.nextByte();
+        
 
         System.out.println("\n=====Payment =====");
         System.out.print("1: Cash on Delivery\n2: Credit Card\n3: Pay by Check (eCheck)\nChoose mode of payment: ");

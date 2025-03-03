@@ -26,6 +26,6 @@ public class AutumnCatalog extends CatalogForImplementation {
         System.out.println("Item: " + itemName);
         System.out.println("Price: " + currency + itemPrice);
         System.out.println("InStock: " + itemStock);
-        System.out.println("Item Desription: " + itemDescription + "\n");
+        System.out.println("Item Description: " + itemDescription + "\n");
     }
 }

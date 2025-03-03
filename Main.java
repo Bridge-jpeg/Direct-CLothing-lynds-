@@ -1,4 +1,3 @@
-
 import java.util.Scanner;
 
 public class Main {
@@ -8,6 +7,7 @@ public class Main {
         Inventory inventory = new Inventory();
         Order order = new Order();
         Payment payment = new Payment();
+        Discount discount = new Discount();
 
         // To be implemented
         // Items for Spring catalog (Item name, Item price, Item stock, Item Description)
@@ -163,10 +163,14 @@ public class Main {
                         inventory.checkStock(s4item3.getItemStock());
                         break;
                 }
+               
                 break;
-        }        
+        } 
+
+        
         System.out.print("Enter item quantity: ");
         order.itemQuantity = input.nextByte();
+        discount.isDiscount(true, s1item1.getItemPrice());
 
         System.out.println("\n===== Payment =====");
         System.out.print("1: Cash on Delivery\n2: Credit Card\n3: Pay by Check (eCheck)\nChoose mode of payment: ");
@@ -194,6 +198,7 @@ public class Main {
         }
         order.printReceipt(customer.userName, customer.userAddress, customer.userContactNumber, s1item1.getItemName()
         , s1item1.getItemPrice(), order.itemQuantity, payment.paymentType(payment.modeOfPayment, payment.bankName, payment.accountNumber), payment.paymentID);
+        
         input.close();
     }
     

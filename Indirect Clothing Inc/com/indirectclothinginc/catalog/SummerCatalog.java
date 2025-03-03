@@ -1,6 +1,6 @@
+package indirectclothinginc.catalog;
 
-
-public class SummerCatalog extends CatalogForImplementation {
+public class SummerCatalog extends Catalog {
 
     @Override
     public String getItemName() {return this.itemName;}
@@ -25,7 +25,7 @@ public class SummerCatalog extends CatalogForImplementation {
     public void itemInfo() {
         System.out.println("Item: " + itemName);
         System.out.println("Price: " + currency + itemPrice);
-        System.out.println("InStock: " + itemStock + "\n");
+        System.out.println("InStock: " + itemStock);
         System.out.println("Item Description: " + itemDescription + "\n");
     }
 }

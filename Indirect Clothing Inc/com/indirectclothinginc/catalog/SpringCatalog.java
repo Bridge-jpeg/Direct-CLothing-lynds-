@@ -1,4 +1,6 @@
-public class SpringCatalog extends CatalogForImplementation{
+package indirectclothinginc.catalog;
+
+public class SpringCatalog extends Catalog {
     @Override
     public boolean isCurrent(){
         return true;
@@ -17,6 +19,8 @@ public class SpringCatalog extends CatalogForImplementation{
         this.itemDescription = itemDescription;
         
     }
+
+
     @Override
     public void itemInfo(){
         System.out.println("Item: " +itemName);
@@ -24,4 +28,21 @@ public class SpringCatalog extends CatalogForImplementation{
         System.out.println("InStock: " +itemStock );
         System.out.println("Item Description: " + itemDescription + "\n");
     }
+
+//    @Override
+//    public double isDiscounted(boolean isCurrent) {
+//        if (isCurrent){
+//            return itemPrice = itemPrice*.7;
+//        }
+//        else {
+//            return itemPrice;
+//        }
+//    }
+    /*
+    method (boolean isCurrent){
+        if isCurrent{
+            return itemPrice = itemPrice*.70;
+        }
+    }
+     */
 }

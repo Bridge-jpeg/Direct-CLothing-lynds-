@@ -1,5 +1,6 @@
+package indirectclothinginc.catalog;
 
-public class WinterCatalog extends CatalogForImplementation {
+public class WinterCatalog extends Catalog {
 
     @Override
     public String getItemName() {return this.itemName;}

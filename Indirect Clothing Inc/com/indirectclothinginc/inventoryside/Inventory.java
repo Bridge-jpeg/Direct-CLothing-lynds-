@@ -1,40 +1,35 @@
 package indirectclothinginc.inventoryside;
+import indirectclothinginc.catalog.Catalog;
+import java.util.Scanner;
 
 public class Inventory {
+    public String selectedItemName;
+    public double selectedItemPrice;
 
-    public void setNameAndPrice(String String, Integer ints){
-        System.out.println(String);
-        checkStock(ints);
-    }
+    public void showCatalog(String StringCatalogName, Catalog [] catalogs, Scanner input){
+        byte itemNumber = 1;
+        System.out.println(StringCatalogName);
+        for (Catalog i : catalogs){
+            System.out.print("Item "+ itemNumber + ": ");
+            i.itemInfo();
+            itemNumber ++;
+        }
 
-    public void checkStock (Integer ints){
-        if (ints <= 0){
+        System.out.print("Choose Item: ");
+        byte chooseItem = input.nextByte();
+        Catalog showItem = catalogs [chooseItem - 1]; //choose item - 1 since index starts at 0, so needs to be readjusted  by - 1
+        System.out.println(showItem.getItemName());
+        if (showItem.getItemStock() <= 0){
             System.out.println("Out of stock, Pre order? ");
             System.out.println("1: Yes\n2: No");
             System.out.print("Enter your Choice: ");
         }
-        else{
+        else {
             System.out.println("Proceed to payment");
         }
+        selectedItemName = showItem.getItemName();
+        selectedItemPrice = showItem.getItemPrice();
     }
-    public void ifPreOrder(Byte bytes){
-        if (bytes == 2){
-            System.exit(0);
-        }
-    }
-/*
-    method (int){
-        if yes
-            send supplier
-            bytes dateOfArrival = dateOfArrival + 5
-            return successfully pre ordered
-        else
-            system.exit()
-    }
-
-
- */
-
 
 }
 
